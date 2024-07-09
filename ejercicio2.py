@@ -53,7 +53,11 @@ mutation_rate = 0.1
 # Inicializar la población
 population = initialize_population(pop_size, bounds)
 best_outputs = []
-
+print("población Inicial")
+text_population = ""
+for pop in population:
+    text_population += f"{pop}, "
+print(text_population)
 # Iteración a través de generaciones
 for generation in range(num_generations):
     fitness = evaluate_fitness(population)
